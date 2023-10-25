@@ -34,14 +34,14 @@ the plugins explicitly:
 sonobuoy gen -p=e2e --e2e-focus='\[Conformance\]' --e2e-skip='' --e2e-repo-config=conformance-image-config.yaml
 ```
 
-ANd that's the final command whose output we want to match. To help check this,
+And that's the final command whose output we want to match. To help check this,
 use the provided `make` target:
 
 ```sh
 make compare
 ```
 
-This saves both outputs to temporary files and diffs them. If no ouput is shown,
+This saves both outputs to temporary files and diffs them. If no output is shown,
 that means both ways of generating the manifests produced exactly the same
 output.
 
