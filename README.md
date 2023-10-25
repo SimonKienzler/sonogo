@@ -1,7 +1,7 @@
 # Running `sonobuoy` Conformance Tests using Go
 
-Our goal is to run the following command, not using the `sonobuoy` CLI, but from
-Go code:
+Our goal is to run the following command, not using the `sonobuoy` CLI (version
+`v0.56.16`), but from Go code:
 
 ```sh
 sonobuoy run --mode=certified-conformance --e2e-repo-config=conformance-image-config.yaml
@@ -44,3 +44,9 @@ make compare
 This saves both outputs to temporary files and diffs them. If no ouput is shown,
 that means both ways of generating the manifests produced exactly the same
 output.
+
+## Deploying a E2E Conformance Run via Go
+
+```sh
+make run
+```

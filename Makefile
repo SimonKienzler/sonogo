@@ -13,8 +13,12 @@ clean:
 
 .PHONY: go-gen
 go-gen:
-	@go run main.go > go-gen.yaml
+	@go run main.go gen > go-gen.yaml
 
 .PHONY: sonobuoy-gen
 sonobuoy-gen:
 	@sonobuoy gen -p=e2e --e2e-focus='\[Conformance\]' --e2e-skip='' --e2e-repo-config=conformance-image-config.yaml > sono-gen.yaml
+
+.PHONY: run
+run:
+	@go run main.go run
